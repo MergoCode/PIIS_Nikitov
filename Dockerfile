@@ -1,4 +1,3 @@
-# ================= Stage 1: trainer =================
 FROM python:3.10-slim AS trainer
 WORKDIR /build
 
@@ -12,11 +11,9 @@ ARG EPOCHS=5
 ARG SEED=42
 
 COPY src/ ./src/
-# Завантаження датасету, навчання, оцінка → /build/artifacts
 RUN python -m src.train --classes yes no up down --epochs ${EPOCHS} --seed ${SEED} \
     --out /build/artifacts
 
-# ================= Stage 2: runtime =================
 FROM python:3.10-slim AS runtime
 WORKDIR /app
 
