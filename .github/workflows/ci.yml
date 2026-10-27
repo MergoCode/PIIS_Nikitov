@@ -50,7 +50,7 @@ jobs:
         run: |
           ACC=$(curl -s http://localhost:8000/model-info | python -c "import sys, json; data=json.load(sys.stdin); print(data.get('accuracy', 0))")
           echo "Extracted accuracy: $ACC%"
-          python -c "import sys; acc = float('$ACC'); sys.exit(0 if acc >= 75.0 else 1)"
+          python -c "import sys; acc = float('$ACC'); sys.exit(0 if acc >= 99.999 else 1)"
 
       - name: Logs on failure
         if: failure()
