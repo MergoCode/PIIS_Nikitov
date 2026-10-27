@@ -1,0 +1,9 @@
+# Data and large files
+data/
+SpeechCommands/
+*.tar.gz
+*.pth
+.venv/
+__pycache__/
+*.pyc
+uvicorn.log

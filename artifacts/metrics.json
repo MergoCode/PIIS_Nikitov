@@ -1,0 +1,15 @@
+{
+  "accuracy": 87.88,
+  "test_loss": 0.3398,
+  "model_size_kb": 154.0,
+  "epochs": 3,
+  "seed": 42,
+  "classes": [
+    "yes",
+    "no",
+    "up",
+    "down"
+  ],
+  "architecture": "AudioCNN",
+  "model_version": "1.0.0"
+}
